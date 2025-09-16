@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inscription — Esikia (Mobile v1)</title>
+<style>
+:root{
+  --bg:#f4f7f6;--panel:#ffffff;--ink:#1c3a31;--muted:#5f7169;--label:#2f4b42;
+  --line:#e2eee8;--brand:#179e80;--brand-dark:#0f7c66;--danger:#c9342c;
+  --radius:14px;--shadow:0 1px 1px rgba(0,0,0,.02), 0 8px 24px rgba(0,0,0,.06);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:15px/1.45 Inter, system-ui, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;}
+.wrap{max-width:420px;margin:20px auto;padding:0 16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;margin-bottom:16px}
+h1{color:var(--brand-dark);font-size:24px;line-height:1.2;margin:0 0 8px;text-align:center}
+.lead{margin:0 0 14px;text-align:center;color:var(--muted)}
+h2{margin:0 0 12px;font-size:16px;text-align:center;color:var(--brand-dark)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.field{display:flex;flex-direction:column;gap:6px}
+label{color:var(--label);font-size:13px}
+input[type="text"],input[type="email"],input[type="tel"],input[type="password"],select{
+  width:100%;height:42px;border:1px solid var(--line);border-radius:10px;padding:8px 10px;background:#fff;color:var(--ink);
+}
+input::placeholder{color:#9aa7a0}
+.consent{display:flex;align-items:flex-start;gap:8px;color:var(--ink);font-size:13px;margin-top:6px}
+.consent a{color:var(--brand-dark);font-weight:700;text-decoration:underline;text-underline-offset:2px}
+.btn{display:block;width:100%;height:46px;border-radius:12px;background:var(--brand);color:#fff;border:0;font-weight:700;margin-top:10px}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Bienvenue sur Esikia</h1>
+      <p class="lead">Ces quelques informations suffisent pour créer votre espace personnel.<br>
+      L’inscription est simple et rapide, pour vous permettre d’accéder sereinement à nos services.</p>
+    </div>
+
+    <div class="card">
+      <h2>Faisons connaissance</h2>
+      <div class="grid">
+        <div class="field">
+          <label>Prénom <span style="color:var(--danger)">*</span></label>
+          <input type="text" placeholder="Votre prénom">
+        </div>
+        <div class="field">
+          <label>Nom <span style="color:var(--danger)">*</span></label>
+          <input type="text" placeholder="Votre nom">
+        </div>
+        <div class="field">
+          <label>Genre <span style="color:var(--danger)">*</span></label>
+          <select>
+            <option>Sélectionnez…</option>
+            <option>Femme</option>
+            <option>Homme</option>
+            <option>Autre / Préfère ne pas dire</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Tranche d’âge <span style="color:var(--danger)">*</span></label>
+          <select>
+            <option>Sélectionnez…</option>
+            <option>18–25</option><option>26–35</option><option>36–50</option><option>51–65</option><option>65+</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Téléphone <span style="color:var(--danger)">*</span></label>
+          <input type="tel" placeholder="+33 6 12 34 56 78">
+        </div>
+        <div class="field">
+          <label>Langue <span style="color:var(--danger)">*</span></label>
+          <select>
+            <option>Sélectionnez…</option><option>Français</option><option>Anglais</option><option>Espagnol</option><option>Italien</option><option>Allemand</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Email <span style="color:var(--danger)">*</span></label>
+          <input type="email" placeholder="vous@example.com">
+        </div>
+        <div class="field">
+          <label>Mot de passe <span style="color:var(--danger)">*</span></label>
+          <input type="password" placeholder="Min. 8 caractères, 1 majuscule">
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Votre provenance</h2>
+      <div class="grid" style="grid-template-columns:1fr 1fr;">
+        <div class="field">
+          <label>Pays <span style="color:var(--danger)">*</span></label>
+          <select>
+            <option>FR</option><option>BE</option><option>CH</option><option>ES</option><option>IT</option><option>DE</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Code postal <span style="color:var(--muted);font-weight:500">(si FR)</span></label>
+          <input type="text" placeholder="75008">
+        </div>
+      </div>
+      <div class="field" style="margin-top:12px">
+        <label>Ville <span style="color:var(--danger)">*</span></label>
+        <input type="text" placeholder="Votre ville">
+      </div>
+      <label class="consent">
+        <input type="checkbox" style="margin-top:2px;width:18px;height:18px">
+        <span>J’accepte la <a href="#">Charte Esikia</a> et les <a href="#">Conditions Générales d’Utilisation</a>.</span>
+      </label>
+      <button class="btn">Créer mon compte</button>
+    </div>
+
+    <div style="color:var(--muted);font-size:12px;text-align:center;margin:12px 0 4px">
+      En créant un compte, vous confirmez que vos informations seront utilisées uniquement pour vous accompagner sereinement dans nos services, conformément à notre politique de confidentialité.
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inscription — Esikia (Desktop v7)</title>
+<style>
+:root{
+  --bg:#f4f7f6;
+  --panel:#ffffff;
+  --ink:#1c3a31;
+  --muted:#5f7169;
+  --label:#2f4b42;
+  --line:#e2eee8;
+  --brand:#179e80;
+  --brand-dark:#0f7c66;
+  --danger:#c9342c;
+  --radius:14px;
+  --shadow:0 1px 1px rgba(0,0,0,.02), 0 8px 24px rgba(0,0,0,.06);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font:16px/1.45 Inter, system-ui, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+}
+
+.wrap{max-width:1100px;margin:28px auto;padding:0 20px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);}
+h1{margin:0 0 8px 0;font-size:40px;line-height:1.15;text-align:center;color:var(--brand-dark);}
+.lead, .sublead{margin:0;text-align:center;color:var(--muted)}
+.lead{font-size:16px;margin-top:4px}
+.sublead{font-size:16px;margin-top:6px;margin-bottom:18px}
+
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.panel{padding:20px}
+.panel h2{margin:0 0 16px 0;font-size:18px;text-align:center;color:var(--brand-dark)}
+
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:8px}
+label{color:var(--label);font-size:14px}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select{
+  width:100%;height:44px;
+  padding:10px 12px;border-radius:12px;
+  border:1px solid var(--line);
+  background:#fff;color:var(--ink);
+  outline:none;
+}
+input::placeholder{color:#9aa7a0}
+
+.actions{display:flex;flex-direction:column;gap:14px;padding:8px 20px 20px}
+.consent{display:flex;align-items:flex-start;gap:10px;color:var(--ink);font-size:14px}
+.consent a{color:var(--brand-dark);font-weight:700;text-decoration:underline;text-underline-offset:2px}
+.btn{
+  display:inline-block;text-align:center;border:1px solid transparent;
+  background:var(--brand);color:#fff;font-weight:700;
+  border-radius:12px;padding:14px 16px;height:48px;line-height:20px;
+  box-shadow:0 1px 0 rgba(0,0,0,.02);
+}
+.btn:focus{outline:2px solid #bfe8df;outline-offset:2px}
+.btn:disabled{opacity:.6;cursor:not-allowed}
+
+.footer-note{margin:16px 0 6px;color:var(--muted);text-align:center;font-size:13px}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Bienvenue sur Esikia</h1>
+    <p class="lead">Ces quelques informations suffisent pour créer votre espace personnel.</p>
+    <p class="sublead">L’inscription est simple et rapide, pour vous permettre d’accéder sereinement à nos services.</p>
+
+    <div class="card" style="padding:20px">
+      <div class="grid">
+        <!-- Colonne gauche -->
+        <div class="panel">
+          <h2>Faisons connaissance</h2>
+          <div class="fields">
+            <div class="field">
+              <label>Prénom <span style="color:var(--danger)">*</span></label>
+              <input type="text" placeholder="Votre prénom">
+            </div>
+            <div class="field">
+              <label>Nom <span style="color:var(--danger)">*</span></label>
+              <input type="text" placeholder="Votre nom">
+            </div>
+
+            <div class="field">
+              <label>Genre <span style="color:var(--danger)">*</span></label>
+              <select>
+                <option>Sélectionnez…</option>
+                <option>Femme</option>
+                <option>Homme</option>
+                <option>Autre / Préfère ne pas dire</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Tranche d’âge <span style="color:var(--danger)">*</span></label>
+              <select>
+                <option>Sélectionnez…</option>
+                <option>18–25</option>
+                <option>26–35</option>
+                <option>36–50</option>
+                <option>51–65</option>
+                <option>65+</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Téléphone <span style="color:var(--danger)">*</span></label>
+              <input type="tel" placeholder="+33 6 12 34 56 78">
+            </div>
+            <div class="field">
+              <label>Langue <span style="color:var(--danger)">*</span></label>
+              <select>
+                <option>Sélectionnez…</option>
+                <option>Français</option>
+                <option>Anglais</option>
+                <option>Espagnol</option>
+                <option>Italien</option>
+                <option>Allemand</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Email <span style="color:var(--danger)">*</span></label>
+              <input type="email" placeholder="vous@example.com">
+            </div>
+            <div class="field">
+              <label>Mot de passe <span style="color:var(--danger)">*</span></label>
+              <input type="password" placeholder="Min. 8 caractères, 1 majuscule">
+            </div>
+          </div>
+        </div>
+
+        <!-- Colonne droite -->
+        <div class="panel">
+          <h2>Votre provenance</h2>
+          <div class="fields">
+            <div class="field">
+              <label>Pays <span style="color:var(--danger)">*</span></label>
+              <select>
+                <option>FR</option>
+                <option>BE</option>
+                <option>CH</option>
+                <option>ES</option>
+                <option>IT</option>
+                <option>DE</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Code postal <span class="muted" style="color:var(--muted);font-weight:500">(si FR)</span></label>
+              <input type="text" placeholder="75008">
+            </div>
+
+            <div class="field" style="grid-column:1 / -1">
+              <label>Ville <span style="color:var(--danger)">*</span></label>
+              <input type="text" placeholder="Votre ville">
+            </div>
+          </div>
+
+          <div class="actions">
+            <label class="consent">
+              <input type="checkbox" style="margin-top:3px;width:18px;height:18px">
+              <span>J’accepte la <a href="#">Charte Esikia</a> et les <a href="#">Conditions Générales d’Utilisation</a>.</span>
+            </label>
+            <button class="btn">Créer mon compte</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="footer-note">
+      En créant un compte, vous confirmez que vos informations seront utilisées uniquement pour vous accompagner sereinement dans nos services, conformément à notre politique de confidentialité.
+    </p>
+  </div>
+</body>
+</html>
