@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fiche retraitant — Esikia</title>
+  <style>
+    :root{
+      --bg:#f1f8f4; --panel:#ffffff; --line:#dfeee7; --ink:#1c3a31; --muted:#6a7c74;
+      --brand:#1aa67b; --brand-dark:#0b7c66; --danger:#c9342c; --ok:#228b22;
+      --radius:14px; --shadow:0 1px 1px rgba(0,0,0,.02),0 8px 24px rgba(0,0,0,.06);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.46 'Inter',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue','Noto Sans',sans-serif}
+    a{color:var(--brand-dark);text-decoration:underline;text-underline-offset:2px}
+    .container{max-width:1140px;margin:22px auto;padding:0 16px}
+    .head{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:14px 18px;display:flex;align-items:center;gap:16px}
+    .head-left{flex:1;min-width:0}
+    .head-title{display:grid;grid-template-columns:40px 1fr;gap:10px;align-items:center}
+    .logo-badge{width:40px;height:40px;border-radius:50%;background:#000;display:inline-grid;place-items:center;color:#f6cf2b;font-weight:800}
+    h1{font-size:18px;margin:0;color:var(--brand-dark);line-height:1.2}
+    .kicker{font-size:13px;color:var(--muted);margin-top:2px;line-height:1.2}
+    .head-info{display:flex;gap:16px;flex-wrap:wrap;margin-top:6px;font-size:13px;color:var(--muted);line-height:1.2}
+    .head-info > div{position:relative;padding-right:0}
+    .head-info > div + div::before{content:"•";margin:0 8px 0 0;color:#90a89f}
+    .actions{display:flex;gap:10px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
+    .btn{background:#fff;border:1.5px solid var(--brand-dark);border-radius:999px;padding:7px 14px;font-weight:600;cursor:pointer;white-space:nowrap;color:var(--brand-dark)}
+    .btn:hover{background:#f2f9f6}
+    .btn-danger{border-color:#ffd6d6;color:#c9342c;order:99}
+    .btn-print{background:#fff;border-color:var(--brand-dark);color:var(--brand-dark)}
+    .grid{display:grid;grid-template-columns:420px auto;gap:16px;margin-top:16px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px}
+    .section{border:1px solid var(--line);border-radius:12px;background:#fff;padding:14px}
+    .section + .section{margin-top:10px}
+    h3{margin:0 0 8px 0;font-size:16px;color:var(--brand-dark)}
+    .profile{display:flex;gap:12px;align-items:center}
+    .avatar{width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid #e8f2ed;display:block}
+    dl{margin:0}
+    .row{display:grid;grid-template-columns:160px 1fr;gap:16px;align-items:flex-start;padding:4px 0;line-height:1.5}
+    .row dt{color:var(--muted)}
+    .row dd{margin:0}
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .chip{display:inline-flex;align-items:center;gap:6px;background:#f7faf8;border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:13px}
+    .chip.warn{background:#fff6f6;border-color:#ffdcdc;color:#7b1c1c}
+    .status-badge{display:inline-block;background:#e9f6ee;color:#228b22;border:1px solid #d1ebd8;font-weight:700;padding:6px 12px;border-radius:999px}
+    .below-badge{display:block;margin-top:6px;color:#6a7c74}
+    .danger{color:#c9342c}
+    .money{font-variant-numeric:tabular-nums}
+    .journal{border-top:1px dashed var(--line)}
+    .jrow{display:flex;gap:12px;align-items:center;padding:6px 0;border-bottom:1px dashed var(--line)}
+    .jrow:last-child{border-bottom:none}
+    .jrow span{flex:0 0 150px;color:var(--muted)}
+    .jrow div{flex:1}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="head">
+      <div class="head-left">
+        <div class="head-title">
+          <span class="logo-badge" title="Esikia">🕊️</span>
+          <div class="title-stack">
+            <h1>Fiche retraitant — Esikia</h1>
+            <div class="kicker">Retraite : Silence & prière — Abbaye Notre-Dame</div>
+            <div class="head-info">
+              <div><strong>Réf. réservation :</strong> R-2025-000123</div>
+              <div><strong>Personnes :</strong> 1</div>
+              <div><strong>Réservation faite le :</strong> 14 sept. 2025 — 12:03</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="actions">
+        <button class="btn">Contacter</button>
+        <button class="btn">PDF récap</button>
+        <button class="btn btn-print">Imprimer</button>
+        <button class="btn btn-danger">Annuler</button>
+      </nav>
+    </header>
+
+    <section class="grid">
+      <!-- LEFT COLUMN -->
+      <aside class="card">
+        <div class="profile">
+          <img class="avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Portrait DUVAL Nicolas" />
+          <div class="who">
+            <h2 style="margin:0 0 2px 0;color:var(--brand-dark)">DUVAL Nicolas</h2>
+            <div class="meta" style="color:var(--muted);font-size:14px">38 ans · Homme</div>
+          </div>
+        </div>
+
+        <div style="margin-top:20px;border-top:1px solid var(--line);padding-top:8px">
+          <dl>
+            <div class="row"><dt>Téléphone</dt><dd><a href="tel:+33658940837">06 58 94 08 37</a></dd></div>
+            <div class="row"><dt>Email</dt><dd><a href="mailto:n.duval@hotmail.com">n.duval@hotmail.com</a></dd></div>
+            <div class="row"><dt>Localisation</dt><dd>Rennes (35) — 35200</dd></div>
+            <div class="row"><dt>Membre Esikia depuis</dt><dd>14 sept. 2025 — 12:03</dd></div>
+          </dl>
+          <div class="chips">
+            <span class="chip warn">⚠ Allergie arachides</span>
+            <span class="chip">🥦 Végétarien</span>
+            <span class="chip">🚗 Voiture</span>
+            <span class="chip">🧎‍♂️ Silence recherché</span>
+          </div>
+        </div>
+
+        <div class="section" style="margin-top:40px">
+          <h3>Paiement & Statut</h3>
+          <p><span class="status-badge">CONFIRMÉE — PAYÉE</span><span class="below-badge">Versement planifié : 18 nov. 2025</span></p>
+          <dl>
+            <div class="row"><dt>Montant payé</dt><dd class="money">280,00 €</dd></div>
+            <div class="row"><dt>Reçu</dt><dd><a href="#">ES-251114-001 (PDF)</a></dd></div>
+            <div class="row"><dt>Canal</dt><dd>CB (3‑D Secure)</dd></div>
+            <div class="row"><dt>Facture</dt><dd><a href="#">Télécharger (PDF)</a></dd></div>
+            <div class="row"><dt>Calendrier</dt><dd>🗓️ <a href="#">Ajouter au calendrier (.ics)</a></dd></div>
+            <div class="row"><dt>Dernière action</dt><dd>Email hôte envoyé · 14 sept. 18:46</dd></div>
+          </dl>
+        </div>
+      </aside>
+
+      <!-- RIGHT COLUMN -->
+      <main class="card" style="display:flex;flex-direction:column;gap:12px">
+        <div class="section">
+          <h3>📅 Récapitulatif</h3>
+          <dl>
+            <div class="row"><dt>Arrivée</dt><dd><strong>Ven 14 nov 18H00</strong></dd></div>
+            <div class="row"><dt>Départ</dt><dd><strong>Dim 16 nov 14H00</strong></dd></div>
+            <div class="row"><dt>Note hôte</dt><dd>Prévenir la cuisine (arachides). Accueil au portail Ouest.</dd></div>
+            <div class="row"><dt>Heure d’arrivée</dt><dd>Entre 18H00 et 20H00 (prévue 18H00)</dd></div>
+            <div class="row"><dt>Commentaires</dt><dd>Pays de Rennes — 1 h de route — pas de covoiturage</dd></div>
+            <div class="row"><dt>Mode de déplacement</dt><dd>Voiture</dd></div>
+          </dl>
+        </div>
+
+        <div class="section">
+          <h3>🍽️ Santé & Alimentation</h3>
+          <dl>
+            <div class="row"><dt>Allergies</dt><dd class="danger">⚠ Arachides</dd></div>
+            <div class="row"><dt>Régime</dt><dd>Végétarien (œufs OK, lait OK)</dd></div>
+            <div class="row"><dt>Intolérances</dt><dd>Lactose — légère (tolérée en petite quantité)</dd></div>
+            <div class="row"><dt>Infos utiles</dt><dd>Hydratation régulière recommandée</dd></div>
+          </dl>
+        </div>
+
+        <div class="section">
+          <h3>♿ Accessibilité</h3>
+          <dl>
+            <div class="row"><dt>Mobilité</dt><dd>Autonome, évite les escaliers longs</dd></div>
+            <div class="row"><dt>Appareillage</dt><dd>Aucun</dd></div>
+            <div class="row"><dt>Hébergement</dt><dd>Attribué par le lieu</dd></div>
+          </dl>
+        </div>
+
+        <div class="section">
+          <h3>📩 Journal</h3>
+          <div class="journal">
+            <div class="jrow"><span>14 sept. 18:46</span><div>✅ Email envoyé à l’hôte</div></div>
+            <div class="jrow"><span>14 sept. 18:45</span><div>✅ Réservation confirmée (payée)</div></div>
+            <div class="jrow"><span>14 sept. 18:44</span><div>✅ Paiement accepté (sécurisé)</div></div>
+            <div class="jrow"><span>14 sept. 18:30</span><div>✅ Profil mis à jour (allergie arachides)</div></div>
+          </div>
+        </div>
+      </main>
+    </section>
+  </div>
+</body>
+</html>
